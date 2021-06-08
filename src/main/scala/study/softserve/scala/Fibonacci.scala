@@ -2,6 +2,9 @@ package study.softserve.scala
 
 import scala.annotation.tailrec
 
+/**
+ * Fibonacci numbers
+ */
 object Fibonacci {
 
   def main(args: Array[String]): Unit = {
