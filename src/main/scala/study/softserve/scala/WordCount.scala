@@ -17,19 +17,13 @@ package study.softserve.scala
  * The words can be separated by any form of whitespace (ie "\t", "\n", " ")
  */
 object WordCount {
-  def main(args: Array[String]): Unit = {
-    val source: String = "That's the password: 'PASSWORD 123'!, cried the Special Agent. So I fled"
+  def findDuplicates(source: String): Map[String, Int] = {
     val words = source
       .replaceAll("[^\\w\\d\\s']|(?<=^|\\W)'|'(?=\\W|$)", "")
       .split("\\s")
       .toList
 
-    findDuplicates(words)
-      .foreach(t => println(s"${t._1}: ${t._2}"))
-  }
-
-  def findDuplicates(source: List[String]): Map[String, Int] = {
-    source
+    words
       .map(_.toLowerCase)
       .foldLeft(Map.empty[String, Int]) { (map, word) =>
         map + (word -> (map.getOrElse(word, 0) + 1))
