@@ -21,5 +21,7 @@ class KindergartenTest extends AnyFunSuite with Matchers {
     actual shouldBe expected
 
     //подивись ще функцію createGarden я не знаю як її затестувати :)
+
+    println(Kindergarten.createGarden(5))
   }
 }
