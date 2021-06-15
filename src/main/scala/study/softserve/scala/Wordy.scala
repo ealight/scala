@@ -10,6 +10,8 @@ object Wordy {
       "divided by" -> ((i: Int, j: Int) => i / j)
     )
 
+    val operationsKeys = operations.keys.mkString("|")
+
     val indexes = source
       .split("\\D")
       .filter(_.nonEmpty)
@@ -17,7 +19,7 @@ object Wordy {
       .toList
 
     val ops = source
-      .split("[^(divided by|minus|multiplied by|plus|)]")
+      .split(s"[^($operationsKeys)]")
       .flatMap(x => operations.filter(op => op._1 == x.trim).values)
       .toList
 
