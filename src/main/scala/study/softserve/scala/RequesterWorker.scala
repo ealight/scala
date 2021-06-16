@@ -33,7 +33,7 @@ class RequesterWorker extends Actor {
         .map(response => parse(response)
           .camelizeKeys
           .extract[CityWeather])
-          .foreach(println)
+        .foreach(println)
 
     }
   }
