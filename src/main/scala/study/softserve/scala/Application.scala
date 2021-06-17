@@ -13,7 +13,7 @@ object Application {
     val creator = system.actorOf(Props[RequestDispatcher], "RequesterCreator")
 
     system.scheduler.schedule(0 millis, 1 minute) {
-      println("--------------------------------------------")
+      println("---------------------------------------------")
       for (city <- cities)
         creator ! city
     }
