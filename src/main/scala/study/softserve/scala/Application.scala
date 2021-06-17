@@ -10,7 +10,7 @@ object Application {
     import system.dispatcher
 
     val system: ActorSystem = ActorSystem("RequesterCreator")
-    val creator = system.actorOf(Props[RequesterCreator], "RequesterCreator")
+    val creator = system.actorOf(Props[RequestDispatcher], "RequesterCreator")
 
     system.scheduler.schedule(0 millis, 1 minute) {
       println("--------------------------------------------")

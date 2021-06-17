@@ -11,7 +11,7 @@ import study.softserve.scala.JSONParser.CityWeather
 import scala.concurrent.duration.DurationInt
 import scala.language.postfixOps
 
-class RequesterWorker extends Actor {
+class RequestActor extends Actor {
   implicit val system: ActorSystem = ActorSystem()
   implicit val materializer: ActorMaterializer = ActorMaterializer()
   implicit val formats: DefaultFormats.type = DefaultFormats
