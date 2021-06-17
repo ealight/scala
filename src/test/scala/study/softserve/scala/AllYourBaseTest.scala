@@ -5,7 +5,7 @@ import org.scalatest.matchers.should.Matchers
 
 class AllYourBaseTest extends AnyFunSuite with Matchers{
 
-  test("From base 2 to base 10") {
+  test("From base 2 to base 101") {
     val value = 1010101
     val base = 10
 
