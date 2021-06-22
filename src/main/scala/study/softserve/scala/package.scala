@@ -1,10 +1,7 @@
 package study.softserve
 
-import akka.actor.ActorSystem
-import akka.stream.ActorMaterializer
-import org.json4s.DefaultFormats
-
 package object scala {
+<<<<<<< HEAD
   implicit val system: ActorSystem = ActorSystem("Actor")
   implicit val materializer: ActorMaterializer = ActorMaterializer()
   implicit val formats: DefaultFormats.type = DefaultFormats
@@ -16,4 +13,8 @@ package object scala {
 
   val apiResponseTimeout = 3
   val schedulerTimeout = 1
+=======
+  val openWeatherApiKey: String = "932990025e60573ec55fb150d6ae8368"
+  val cities = List("London", "Paris", "Kyiv", "Lviv", "Singapore", "Rome", "Beijing", "Seoul")
+>>>>>>> parent of ef52027... added communication between actors / added sort by temperature
 }
